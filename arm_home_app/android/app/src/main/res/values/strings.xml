@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ArmHome</string>
+    <string name="title_activity_main">ArmHome</string>
+    <string name="package_name">com.entanik.armhome</string>
+    <string name="custom_url_scheme">com.entanik.armhome</string>
+</resources>

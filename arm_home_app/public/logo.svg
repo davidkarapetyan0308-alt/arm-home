@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Pin Outline -->
+  <path d="M 50 86 C 50 86 14 55 14 38 A 36 36 0 1 1 86 38 C 86 55 50 86 50 86 Z" fill="none" stroke="#168cb7" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+  
+  <!-- House base horizontal line -->
+  <line x1="32" y1="58" x2="68" y2="58" stroke="#168cb7" stroke-width="4.5" stroke-linecap="round"/>
+  
+  <!-- Outer Roof -->
+  <path d="M 50 27 L 68 44 M 50 27 L 32 44" fill="none" stroke="#168cb7" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/>
+  
+  <!-- Inner Roof -->
+  <path d="M 50 34 L 63 46.5 M 50 34 L 37 46.5" fill="none" stroke="#168cb7" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+
+  <!-- House Walls -->
+  <path d="M 37 46.5 L 37 58 M 63 46.5 L 63 58" fill="none" stroke="#168cb7" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Chimney on the right slope -->
+  <path d="M 59 36 L 59 30 L 63 30 L 63 40" fill="none" stroke="#168cb7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Orange Door (left) -->
+  <rect x="42.5" y="48" width="6.5" height="10" fill="#ef7f1a" rx="0.5"/>
+  
+  <!-- Orange Window (right) -->
+  <rect x="52.5" y="48" width="6" height="6" fill="#ef7f1a" rx="0.5"/>
+</svg>

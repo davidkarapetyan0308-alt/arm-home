@@ -1,0 +1,4 @@
+version: "3"
+agent:
+  authtoken: YOUR_NGROK_AUTHTOKEN_HERE
+  web_addr: false

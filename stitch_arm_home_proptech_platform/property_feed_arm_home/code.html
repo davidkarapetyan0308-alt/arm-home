@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Property Feed - Arm Home</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface": "#1a1c1c",
+                      "surface": "#f9f9f9",
+                      "inverse-surface": "#2f3131",
+                      "surface-container-high": "#e8e8e8",
+                      "outline-variant": "#c4c6cd",
+                      "inverse-primary": "#b7c8de",
+                      "on-secondary-fixed": "#380d00",
+                      "surface-variant": "#e2e2e2",
+                      "on-tertiary-container": "#4f3e00",
+                      "secondary": "#a93700",
+                      "surface-dark": "#0A0C10",
+                      "on-primary-fixed-variant": "#38485a",
+                      "on-secondary": "#ffffff",
+                      "secondary-fixed-dim": "#ffb59b",
+                      "surface-container-low": "#f3f3f3",
+                      "tertiary-fixed-dim": "#e9c349",
+                      "surface-tint": "#4f6073",
+                      "on-secondary-fixed-variant": "#812800",
+                      "tertiary-fixed": "#ffe088",
+                      "surface-dim": "#dadada",
+                      "on-tertiary-fixed": "#241a00",
+                      "on-error-container": "#93000a",
+                      "surface-container": "#eeeeee",
+                      "heritage-gold": "#D4AF37",
+                      "secondary-container": "#fd6b31",
+                      "surface-container-highest": "#e2e2e2",
+                      "tertiary": "#735c00",
+                      "primary": "#041627",
+                      "surface-bright": "#f9f9f9",
+                      "slate-deep": "#1A2B3C",
+                      "outline": "#74777d",
+                      "tertiary-container": "#cca830",
+                      "on-primary-container": "#8192a7",
+                      "surface-light": "#FFFFFF",
+                      "error": "#ba1a1a",
+                      "on-background": "#1a1c1c",
+                      "on-primary": "#ffffff",
+                      "background": "#f9f9f9",
+                      "primary-container": "#1a2b3c",
+                      "secondary-fixed": "#ffdbcf",
+                      "on-surface-variant": "#44474c",
+                      "error-container": "#ffdad6",
+                      "on-primary-fixed": "#0b1d2d",
+                      "glass-border": "rgba(255, 255, 255, 0.12)",
+                      "on-tertiary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "primary-fixed": "#d2e4fb",
+                      "on-tertiary-fixed-variant": "#574500",
+                      "on-secondary-container": "#5c1a00",
+                      "primary-fixed-dim": "#b7c8de",
+                      "tuff-terracotta": "#C04000",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-on-surface": "#f1f1f1"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-max": "1280px",
+                      "gutter": "24px",
+                      "margin-desktop": "40px",
+                      "margin-mobile": "16px",
+                      "unit": "8px"
+              },
+              "fontFamily": {
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "34px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        /* Hide scrollbar for clean aesthetic but keep functionality */
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+        
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface antialiased flex flex-col min-h-screen">
+<!-- TopAppBar (Web) -->
+<header class="hidden md:flex bg-white/70 backdrop-blur-2xl text-primary font-headline-md text-headline-md border-b border-outline-variant/30 fixed top-0 left-0 w-full z-50 justify-between items-center px-margin-desktop h-16">
+<div class="flex items-center gap-4 cursor-pointer hover:opacity-80 transition-opacity active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</div>
+<div class="font-headline-md text-headline-md font-bold text-primary">Arm Home</div>
+<div class="flex items-center gap-4 cursor-pointer hover:opacity-80 transition-opacity active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="tune">tune</span>
+</div>
+</header>
+<!-- TopAppBar (Mobile) -->
+<header class="flex md:hidden bg-white/70 backdrop-blur-2xl text-primary font-headline-md text-headline-md border-b border-outline-variant/30 fixed top-0 left-0 w-full z-50 justify-between items-center px-margin-mobile h-16">
+<div class="flex items-center gap-4 cursor-pointer hover:opacity-80 transition-opacity active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</div>
+<div class="font-headline-md text-headline-md font-bold text-primary">Arm Home</div>
+<div class="flex items-center gap-4 cursor-pointer hover:opacity-80 transition-opacity active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="tune">tune</span>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-grow pt-20 pb-32 md:pt-24 md:pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<!-- Header Section -->
+<div class="mb-8 md:mb-12 text-center md:text-left pt-4">
+<h1 class="font-display-lg text-display-lg text-primary mb-2 hidden md:block">Explore Properties</h1>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-2 md:hidden">Explore Properties</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Discover premium real estate across Yerevan.</p>
+</div>
+<!-- Property Feed Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-gutter">
+<!-- Property Card 1 -->
+<article class="group bg-surface-lowest rounded-xl overflow-hidden border border-outline-variant/30 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer flex flex-col relative bg-surface-light">
+<!-- Image Container -->
+<div class="relative w-full aspect-[4/3] overflow-hidden rounded-t-xl">
+<img alt="Luxury apartment in Kentron" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" data-alt="A modern, high-end luxury apartment interior in Kentron, Yerevan, featuring floor-to-ceiling windows with a view of Mount Ararat. The living room is styled with premium minimalist furniture in neutral tones of slate and white, accented by subtle heritage gold details. Natural light floods the space, creating a bright, airy atmosphere typical of a premium real estate listing. The photography is clean, professional, and highlights the spaciousness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHqQd0_homK1P7KaXZCZNgfyG1qDht1c8Du1zzxG6Em6FDNtTOSVopgEmkGb5W9aWJn_tHdjNT5_uYmBFqQjeTivCywQP9lGXPYOpG7afVxQiWoS9jFspha3iFuk8h2WInk74_eySUwufXdL0KQn0RuukZI8TLErnvkLVKdGMqgA6f8tDvwnWYwkGaf4gyekeoQ68SV8jlqsQdmbS9hRNhD3d0dw2cksQSw1pGrAs-t5OdjL3lhHWcZ7UXH-OsqcmGImquId_4F6Nz"/>
+<!-- AI Valuation Badge - Good Deal -->
+<div class="absolute top-4 left-4 bg-emerald-500/90 backdrop-blur-md text-white px-3 py-1.5 rounded-lg flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px] filled">auto_awesome</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Good Deal</span>
+</div>
+<!-- Favorite Button -->
+<button class="absolute top-4 right-4 p-2 bg-white/70 backdrop-blur-md rounded-full text-outline-variant hover:text-tuff-terracotta hover:bg-white transition-all duration-200">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<!-- Content Container -->
+<div class="p-5 flex flex-col flex-grow relative bg-white">
+<div class="flex justify-between items-start mb-2">
+<h2 class="font-headline-md text-headline-md text-primary">$450,000</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-4 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-outline">location_on</span>
+                        Northern Avenue, Kentron
+                    </p>
+<!-- Specs -->
+<div class="flex gap-4 mt-auto pt-4 border-t border-outline-variant/20">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">bed</span>
+<span>3 Beds</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">shower</span>
+<span>2 Baths</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">straighten</span>
+<span>150 sqm</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Property Card 2 -->
+<article class="group bg-surface-lowest rounded-xl overflow-hidden border border-outline-variant/30 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer flex flex-col relative bg-surface-light">
+<div class="relative w-full aspect-[4/3] overflow-hidden rounded-t-xl">
+<img alt="Modern villa in Vahakni" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" data-alt="An exterior shot of a modern, sophisticated villa in the Vahakni residential community, Yerevan. The architecture features clean lines, white facades, and large glass panels, set against a beautifully manicured green lawn. The lighting is golden hour, casting soft, warm shadows and highlighting the premium minimalist aesthetic of the property. The overall mood is tranquil, trustworthy, and high-end." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGObODn_cIHrLCBoknijWbOpwwnNHvhsGd1KG1aO_X4A4z5vib4ivHEwUeW7k389C78XGs8py5uw2Rs7DMRU-mX2MgT-unRq0DcBTq5PVITjaK-0yV6nxv-Ax1XLDniQEhPuuW7ASgBSB3HNHgbXowre-8SwHeef9zJr5dgWnAsVkXfqLAA7fOPFkRY8mOmE_X-ctBqpV31rIW4ceBBjcsFzod3jxV2KqVLNoDmtjkhpmeHfuh5ndl4boHJZq9pMIwOyGJDOKTyNPN"/>
+<!-- AI Valuation Badge - Market Price -->
+<div class="absolute top-4 left-4 bg-primary/80 backdrop-blur-md text-white px-3 py-1.5 rounded-lg flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">bar_chart</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Market Price</span>
+</div>
+<button class="absolute top-4 right-4 p-2 bg-white/70 backdrop-blur-md rounded-full text-outline-variant hover:text-tuff-terracotta hover:bg-white transition-all duration-200">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div class="p-5 flex flex-col flex-grow relative bg-white">
+<div class="flex justify-between items-start mb-2">
+<h2 class="font-headline-md text-headline-md text-primary">$850,000</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-4 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-outline">location_on</span>
+                        Vahakni Residential Community
+                    </p>
+<div class="flex gap-4 mt-auto pt-4 border-t border-outline-variant/20">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">bed</span>
+<span>5 Beds</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">shower</span>
+<span>4 Baths</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">straighten</span>
+<span>320 sqm</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Property Card 3 -->
+<article class="group bg-surface-lowest rounded-xl overflow-hidden border border-outline-variant/30 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer flex flex-col relative bg-surface-light">
+<div class="relative w-full aspect-[4/3] overflow-hidden rounded-t-xl">
+<img alt="Renovated apartment in Arabkir" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" data-alt="A brightly lit, newly renovated apartment bedroom in Arabkir, Yerevan. The space features minimalist decor with white walls, light oak hardwood floors, and a simple, elegant bed frame. Soft morning light streams through a large window, emphasizing a clean, Scandinavian-inspired design that aligns perfectly with a premium minimalist real estate visual style. The atmosphere is peaceful and inviting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9GON5qmUHICdZdpM1phc8u_dhZ9r0QVpsqxt8OYgDx8ZoC_IE574_1gcqG0061IG9k3PK28dD-lm0W2Cx-wWwNGEEyDIlBynPX_lapLWzyqFMOdz3opvZ0Dj9796hR5PaBg_CgMSzgxDIIt3BY_5nvfn-Z1XZNhS41MImAy-HuKrbzLcqehPhWZOERQcok15CRlhV9fztj21mC5q1uq0uqJc2i1Ke80KGdsen3tRr9-7RQmTtHvkaZi-yTRdo-iBZW2eNE7QmccXm"/>
+<!-- AI Valuation Badge - Overpriced -->
+<div class="absolute top-4 left-4 bg-slate-deep/80 backdrop-blur-md text-white px-3 py-1.5 rounded-lg flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Premium</span>
+</div>
+<button class="absolute top-4 right-4 p-2 bg-white/70 backdrop-blur-md rounded-full text-tuff-terracotta bg-white transition-all duration-200">
+<span class="material-symbols-outlined filled">favorite</span>
+</button>
+</div>
+<div class="p-5 flex flex-col flex-grow relative bg-white">
+<div class="flex justify-between items-start mb-2">
+<h2 class="font-headline-md text-headline-md text-primary">$180,000</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-4 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-outline">location_on</span>
+                        Komitas Avenue, Arabkir
+                    </p>
+<div class="flex gap-4 mt-auto pt-4 border-t border-outline-variant/20">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">bed</span>
+<span>2 Beds</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">shower</span>
+<span>1 Bath</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">straighten</span>
+<span>75 sqm</span>
+</div>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- Floating Sort & Filter Actions (FAB style) -->
+<div class="fixed bottom-24 md:bottom-10 left-1/2 -translate-x-1/2 z-40 flex items-center bg-primary text-white rounded-full shadow-[0_8px_30px_rgba(0,0,0,0.15)] overflow-hidden border border-glass-border">
+<button class="flex items-center gap-2 px-6 py-3 hover:bg-slate-deep transition-colors font-label-md text-label-md">
+<span class="material-symbols-outlined text-[20px]">sort</span>
+            Sort
+        </button>
+<div class="w-[1px] h-6 bg-white/20"></div>
+<button class="flex items-center gap-2 px-6 py-3 hover:bg-slate-deep transition-colors font-label-md text-label-md">
+<span class="material-symbols-outlined text-[20px]">filter_list</span>
+            Filter
+        </button>
+</div>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden bg-white/70 backdrop-blur-2xl border-t border-outline-variant/30 shadow-sm fixed bottom-0 left-0 w-full z-50 flex justify-around items-center pt-2 pb-safe px-4 pb-4">
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined mb-1">map</span>
+<span class="font-label-sm text-label-sm">Map</span>
+</button>
+<button class="flex flex-col items-center justify-center text-tuff-terracotta font-semibold hover:text-primary transition-colors active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined mb-1 filled">search</span>
+<span class="font-label-sm text-label-sm">Search</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined mb-1">favorite</span>
+<span class="font-label-sm text-label-sm">Saved</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined mb-1">mail</span>
+<span class="font-label-sm text-label-sm">Inbox</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</button>
+</nav>
+</body></html>

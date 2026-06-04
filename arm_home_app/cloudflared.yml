@@ -1,0 +1,10 @@
+# Cloudflare Tunnel configuration
+# Replace <YOUR_TUNNEL_ID> and <YOUR_CREDENTIALS_JSON_PATH> with values obtained after `cloudflared tunnel create` and `cloudflared tunnel login`.
+
+tunnel: <YOUR_TUNNEL_ID>
+credentials-file: <YOUR_CREDENTIALS_JSON_PATH>
+
+ingress:
+  - hostname: arm-home.dev   # Поддомен, привязанный к вашей зоне Cloudflare
+    service: http://localhost:5173
+  - service: http_status:404

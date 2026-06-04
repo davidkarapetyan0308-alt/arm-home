@@ -1,0 +1,45 @@
+# Dependency directories
+**/node_modules/
+**/dist/
+**/.npm/
+**/.npm-cache/
+**/.npm-home/
+
+# Build outputs
+dist/
+arm_home_app/dist/
+arm_home_app/dist-ssr/
+
+# Logs and outputs
+*.log
+arm_home_app/copy_output.txt
+arm_home_app/sync_output.txt
+
+# Local configurations / secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+arm_home_app/.env
+arm_home_app/.env.*
+
+# OS files
+.DS_Store
+**/.DS_Store
+Thumbs.db
+
+# IDEs and editors
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Data files / temporary scripts
+*.xlsx
+excel_data.json
+
+design-reference/

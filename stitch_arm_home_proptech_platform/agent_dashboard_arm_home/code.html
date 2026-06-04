@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Arm Home - Agent Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#1a1c1c",
+                        "surface": "#f9f9f9",
+                        "inverse-surface": "#2f3131",
+                        "surface-container-high": "#e8e8e8",
+                        "outline-variant": "#c4c6cd",
+                        "inverse-primary": "#b7c8de",
+                        "on-secondary-fixed": "#380d00",
+                        "surface-variant": "#e2e2e2",
+                        "on-tertiary-container": "#4f3e00",
+                        "secondary": "#a93700",
+                        "surface-dark": "#0A0C10",
+                        "on-primary-fixed-variant": "#38485a",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#ffb59b",
+                        "surface-container-low": "#f3f3f3",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "surface-tint": "#4f6073",
+                        "on-secondary-fixed-variant": "#812800",
+                        "tertiary-fixed": "#ffe088",
+                        "surface-dim": "#dadada",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#eeeeee",
+                        "heritage-gold": "#D4AF37",
+                        "secondary-container": "#fd6b31",
+                        "surface-container-highest": "#e2e2e2",
+                        "tertiary": "#735c00",
+                        "primary": "#041627",
+                        "surface-bright": "#f9f9f9",
+                        "slate-deep": "#1A2B3C",
+                        "outline": "#74777d",
+                        "tertiary-container": "#cca830",
+                        "on-primary-container": "#8192a7",
+                        "surface-light": "#FFFFFF",
+                        "error": "#ba1a1a",
+                        "on-background": "#1a1c1c",
+                        "on-primary": "#ffffff",
+                        "background": "#f9f9f9",
+                        "primary-container": "#1a2b3c",
+                        "secondary-fixed": "#ffdbcf",
+                        "on-surface-variant": "#44474c",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#0b1d2d",
+                        "glass-border": "rgba(255, 255, 255, 0.12)",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#d2e4fb",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "on-secondary-container": "#5c1a00",
+                        "primary-fixed-dim": "#b7c8de",
+                        "tuff-terracotta": "#C04000",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#f1f1f1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "margin-desktop": "40px",
+                        "margin-mobile": "16px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="antialiased min-h-screen flex flex-col pt-16 pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 bg-white/70 dark:bg-slate-deep/80 backdrop-blur-2xl border-b border-outline-variant/30 flat no shadows">
+<button class="text-outline dark:text-outline-variant hover:opacity-80 transition-opacity active:scale-95 transition-transform flex items-center justify-center p-2 rounded-full">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">search</span>
+</button>
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary text-center flex-1">
+            Arm Home
+        </div>
+<button class="text-outline dark:text-outline-variant hover:opacity-80 transition-opacity active:scale-95 transition-transform flex items-center justify-center p-2 rounded-full">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">tune</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-8">
+<!-- Welcome Section -->
+<section class="mb-10">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary mb-2">Hello, Aram!</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Here is your performance overview for today.</p>
+</section>
+<!-- Performance Overview (Bento Grid Style) -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+<!-- Metric Card 1 -->
+<div class="bg-surface-light rounded-xl p-6 shadow-sm border border-outline-variant/20 hover:shadow-md transition-shadow duration-300 col-span-2 md:col-span-1">
+<div class="flex items-center justify-between mb-4">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">real_estate_agent</span>
+</div>
+</div>
+<div class="font-headline-md text-headline-md text-primary mb-1">12</div>
+<div class="font-label-md text-label-md text-on-surface-variant">Active Listings</div>
+</div>
+<!-- Metric Card 2 -->
+<div class="bg-surface-light rounded-xl p-6 shadow-sm border border-outline-variant/20 hover:shadow-md transition-shadow duration-300">
+<div class="flex items-center justify-between mb-4">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">visibility</span>
+</div>
+</div>
+<div class="font-headline-md text-headline-md text-primary mb-1">2.4k</div>
+<div class="font-label-md text-label-md text-on-surface-variant">Total Views</div>
+</div>
+<!-- Metric Card 3 -->
+<div class="bg-surface-light rounded-xl p-6 shadow-sm border border-outline-variant/20 hover:shadow-md transition-shadow duration-300">
+<div class="flex items-center justify-between mb-4">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person_add</span>
+</div>
+</div>
+<div class="font-headline-md text-headline-md text-primary mb-1">8</div>
+<div class="font-label-md text-label-md text-on-surface-variant">New Leads</div>
+</div>
+<!-- Contextual Action Card -->
+<div class="bg-primary rounded-xl p-6 shadow-sm flex flex-col justify-between items-start col-span-2 md:col-span-1 relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-white/10 rounded-full blur-2xl group-hover:bg-white/20 transition-all"></div>
+<div class="font-body-md text-body-md text-white/90 mb-4 z-10">Ready to expand your portfolio?</div>
+<button class="bg-tuff-terracotta text-white font-label-md text-label-md px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-opacity-90 transition-opacity z-10">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                    Add Listing
+                </button>
+</div>
+</section>
+<!-- Asymmetric Two-Column Layout for Main Content -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- My Listings (Takes 2 columns on large screens) -->
+<section class="lg:col-span-2">
+<div class="flex justify-between items-end mb-6">
+<h2 class="font-headline-md text-headline-md text-primary">My Listings</h2>
+<a class="font-label-md text-label-md text-tuff-terracotta hover:underline" href="#">View All</a>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Mini Card 1 -->
+<div class="bg-surface-light rounded-xl p-4 flex items-center gap-4 border border-outline-variant/20 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all">
+<div class="w-20 h-20 rounded-lg bg-surface-variant overflow-hidden shrink-0">
+<img alt="Modern villa listing" class="w-full h-full object-cover" data-alt="A modern, high-end villa exterior in Armenia during golden hour. The building features clean architectural lines, large glass windows reflecting the sunset, and a manicured minimalist garden. The scene uses a premium, bright light-mode aesthetic with crisp whites, deep slate shadows, and natural terracotta stone accents. The mood is luxurious and inviting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLpG0VCwLCDI368meI-27FX-LxeQSV0vroSTV_ZTxZXrwRNDUPkmpbvM3bqTHhCYZGfOBhA2vnhfliEzvb8YDaKSIqzrOcCAGyRvwId0xmQDRDbmQPFX_mGByf9donVMEDysoQ2_to2tXzABo6LkPdVY1-o9QVA1EVPq-YSnLu9wcRyQym65XpDZoedFut2Rt-WWFnhCfIGum25Bd1acFv6NQhipRaumgh_D1eZT6AmS_PNBh6pBcfDgncv_OWUzCOb-2aTbrgBU__"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-body-md text-body-md font-semibold text-primary truncate">Yerevan Cascade Luxury Penthouse</h3>
+<span class="bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-2 py-1 rounded-full shrink-0 ml-2">Active</span>
+</div>
+<p class="font-label-sm text-label-sm text-outline mb-2">4 Beds • 3 Baths • 250 sqm</p>
+<div class="font-label-md text-label-md text-primary">$1,200,000</div>
+</div>
+</div>
+<!-- Mini Card 2 -->
+<div class="bg-surface-light rounded-xl p-4 flex items-center gap-4 border border-outline-variant/20 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all">
+<div class="w-20 h-20 rounded-lg bg-surface-variant overflow-hidden shrink-0">
+<img alt="Suburban home listing" class="w-full h-full object-cover" data-alt="A contemporary suburban home in Yerevan with a minimalist facade. The image is taken in bright daylight, showcasing a sleek driveway and large inviting entrance. The color palette emphasizes crisp white walls, slate-grey roof tiles, and subtle warm wood elements, fitting a premium real estate aesthetic. The atmosphere is calm, secure, and highly desirable." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4PtYwIq8FUXSVKIv5gc4iMjJpWU7n1wI_gF4Lemj7N90KECa6gLpgkCYcvsg7FO7m4Vnxlr9NJug5pyRFTWnffWaAbEWvq3OOvqM6H01ry4ejyCONUvJHnDfx1oPEG8A8UXSCFpmA7c9pcXsD0tunAMqrihsFy2KpoUkkX_-SJIR2HyjIPElQs8Ao4t1uQeCZ_T6NipnmzCP1FnRAWKW5D6NNAqa6DfR_E1fQjBeLYq9KfZa1kHXcj_w2B0oyzv_P56zPXqwe7UgF"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-body-md text-body-md font-semibold text-primary truncate">Vahakni District Family Home</h3>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-2 py-1 rounded-full shrink-0 ml-2">Pending</span>
+</div>
+<p class="font-label-sm text-label-sm text-outline mb-2">3 Beds • 2 Baths • 180 sqm</p>
+<div class="font-label-md text-label-md text-primary">$450,000</div>
+</div>
+</div>
+<!-- Mini Card 3 -->
+<div class="bg-surface-light rounded-xl p-4 flex items-center gap-4 border border-outline-variant/20 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all opacity-75">
+<div class="w-20 h-20 rounded-lg bg-surface-variant overflow-hidden shrink-0">
+<img alt="City apartment listing" class="w-full h-full object-cover grayscale-[50%]" data-alt="A bright, modern city apartment interior in central Yerevan, seen through large windows. The scene is brightly lit with natural light, emphasizing clean white walls and polished floors. The image reflects a high-end, light-mode minimalist style. It conveys a sense of completed transaction and satisfaction, with subtle slate and soft earthy tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWm8G7ryLrzUkc9cf8yH2_8d3kzynBl4pUUmL4H8_196jEsMRmAbo-kD6Sqn25YvZIYbD0e1m2BQWN-AFlYSaQfyBmPmpigEry_i6hi_2xNagFAnmMOVXnokPZeE0_KpDmin6TRHFrEdjPzv8ISrDx9bwc80FEBDoKmKfHMUV1PmGUUQVjYNDcSJwXQbggdox3T9lcXGah83gTdJ0Tung6NMAEyTkMl4hL7ThFRvsIURYF7laI3tO3IYmQjlnwYbOQdw44GugXyamM"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-body-md text-body-md font-semibold text-primary truncate">Kentron Modern Studio</h3>
+<span class="bg-surface-variant text-on-surface-variant font-label-sm text-label-sm px-2 py-1 rounded-full shrink-0 ml-2">Sold</span>
+</div>
+<p class="font-label-sm text-label-sm text-outline mb-2">1 Bed • 1 Bath • 65 sqm</p>
+<div class="font-label-md text-label-md text-primary">$180,000</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Leads (Takes 1 column on large screens) -->
+<section class="lg:col-span-1">
+<div class="flex justify-between items-end mb-6">
+<h2 class="font-headline-md text-headline-md text-primary">Recent Leads</h2>
+</div>
+<div class="bg-surface-light rounded-xl border border-outline-variant/20 shadow-sm overflow-hidden">
+<ul class="divide-y divide-outline-variant/20">
+<!-- Lead Item 1 -->
+<li class="p-4 hover:bg-surface-container-low transition-colors flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-label-md font-bold">AN</div>
+<div>
+<div class="font-label-md text-label-md text-primary">Ani Nalbandyan</div>
+<div class="font-label-sm text-label-sm text-outline truncate max-w-[120px]">Yerevan Cascade...</div>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full border border-outline-variant/50 flex items-center justify-center text-primary hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 0;">chat</span>
+</button>
+</li>
+<!-- Lead Item 2 -->
+<li class="p-4 hover:bg-surface-container-low transition-colors flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-label-md font-bold">HG</div>
+<div>
+<div class="font-label-md text-label-md text-primary">Hayk Grigoryan</div>
+<div class="font-label-sm text-label-sm text-outline truncate max-w-[120px]">Vahakni District...</div>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full border border-outline-variant/50 flex items-center justify-center text-primary hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 0;">chat</span>
+</button>
+</li>
+<!-- Lead Item 3 -->
+<li class="p-4 hover:bg-surface-container-low transition-colors flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-variant text-on-surface-variant flex items-center justify-center font-label-md font-bold">LM</div>
+<div>
+<div class="font-label-md text-label-md text-primary">Lilit Martirosyan</div>
+<div class="font-label-sm text-label-sm text-outline truncate max-w-[120px]">General Inquiry</div>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full border border-outline-variant/50 flex items-center justify-center text-primary hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 0;">chat</span>
+</button>
+</li>
+</ul>
+<div class="p-3 bg-surface-container-low border-t border-outline-variant/20 text-center">
+<button class="font-label-md text-label-md text-primary hover:text-tuff-terracotta transition-colors">View All Leads</button>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Floating Action Button (Prominent 'Add New Listing') -->
+<button aria-label="Add New Listing" class="fixed bottom-24 right-4 md:bottom-8 md:right-8 w-14 h-14 bg-tuff-terracotta text-white rounded-full shadow-lg flex items-center justify-center hover:bg-opacity-90 hover:scale-105 active:scale-95 transition-all z-40 hidden md:flex">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">add</span>
+</button>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center pt-2 pb-safe px-4 bg-white/70 dark:bg-slate-deep/80 backdrop-blur-2xl border-t border-outline-variant/30 shadow-sm rounded-t-xl md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-inverse-primary transition-colors active:scale-90 transition-transform duration-200 w-16" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">map</span>
+<span class="font-label-sm text-[10px] tracking-tight">Map</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-inverse-primary transition-colors active:scale-90 transition-transform duration-200 w-16" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">search</span>
+<span class="font-label-sm text-[10px] tracking-tight">Search</span>
+</a>
+<!-- Center FAB alternative for mobile nav integration -->
+<a class="flex flex-col items-center justify-center -mt-6 bg-tuff-terracotta text-white rounded-full w-12 h-12 shadow-md active:scale-90 transition-transform duration-200 border-4 border-white dark:border-slate-deep z-10" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">add</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-inverse-primary transition-colors active:scale-90 transition-transform duration-200 w-16" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">mail</span>
+<span class="font-label-sm text-[10px] tracking-tight">Inbox</span>
+</a>
+<a class="flex flex-col items-center justify-center text-tuff-terracotta dark:text-secondary-fixed-dim font-semibold hover:text-primary dark:hover:text-inverse-primary transition-colors active:scale-90 transition-transform duration-200 w-16" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-label-sm text-[10px] tracking-tight">Profile</span>
+</a>
+</nav>
+<!-- Support for safe area inset on iOS -->
+<style>
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom, 16px); }
+    </style>
+</body></html>
